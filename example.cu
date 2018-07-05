@@ -35,7 +35,7 @@ void HelloWorld_Device() {
   // copy result back to host
   CUCHK(cudaMemcpy(h_num_threads, d_num_threads, sizeof(int), cudaMemcpyDeviceToHost));
 
-  printf("Hello world from GPU with %i threads\n", h_num_threads);
+  printf("Hello world from GPU with %i threads\n", *h_num_threads);
 
   // free memory
   free(h_num_threads);
